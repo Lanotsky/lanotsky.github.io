@@ -42,12 +42,35 @@ html {
         &.body {
             height: 100%;
             width: 100%;
-            h1 {
+            .heading {
                 margin: 40px 0;
                 display: block;
                 text-align: center;
                 span {
                     font-size: 60%;
+                }
+            }
+            .project-grid {
+                width: 80%;
+                margin: 0 auto;
+                padding-top: 35px;
+                display: grid;
+                grid-template-rows: 25% 25% 25%;
+                grid-template-columns: auto auto auto;
+                grid-auto-rows: auto;
+                grid-row-gap: 25px;
+                grid-column-gap: 2%;
+                .box {
+                    min-height: 200px;
+                    width: 100%;
+                    background-color: rgba(10,10,10,0.9);
+                    &.a {
+                        grid-row: 1 / span 2;
+                    }
+
+                    &.f {
+                        grid-column: 1 / span 3;
+                    }
                 }
             }
         }

@@ -325,11 +325,29 @@ html body {
   .front-page.body {
     height: 100%;
     width: 100%; }
-    .front-page.body h1 {
+    .front-page.body .heading {
       margin: 40px 0;
       display: block;
       text-align: center; }
-      .front-page.body h1 span {
-        font-size: 60%; } }
+      .front-page.body .heading span {
+        font-size: 60%; }
+    .front-page.body .project-grid {
+      width: 80%;
+      margin: 0 auto;
+      padding-top: 35px;
+      display: grid;
+      grid-template-rows: 25% 25% 25%;
+      grid-template-columns: auto auto auto;
+      grid-auto-rows: auto;
+      grid-row-gap: 25px;
+      grid-column-gap: 2%; }
+      .front-page.body .project-grid .box {
+        min-height: 200px;
+        width: 100%;
+        background-color: rgba(10, 10, 10, 0.9); }
+        .front-page.body .project-grid .box.a {
+          grid-row: 1 / span 2; }
+        .front-page.body .project-grid .box.f {
+          grid-column: 1 / span 3; } }
 
 /*# sourceMappingURL=main.css.map */
