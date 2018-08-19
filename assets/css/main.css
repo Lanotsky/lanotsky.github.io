@@ -322,15 +322,57 @@ html body {
 
 @media only screen and (max-width: 600px) {
   .front-page.header {
-    height: 90px;
+    height: 50px;
     width: 100%;
     background-color: rgba(10, 10, 10, 0.9); }
+    .front-page.header .icon {
+      height: 40px;
+      width: 40px;
+      margin: 5px 0 0 10px;
+      background-color: rgba(240, 240, 240, 0.9);
+      border-radius: 50% 50%;
+      transition: all 350ms linear; }
+      .front-page.header .icon:hover {
+        background-color: white; }
   .front-page.body {
-    height: 100%;
-    width: 100%; }
-    .front-page.body h1 {
-      margin: 40px auto;
-      display: inline-block; } }
+    height: auto;
+    width: 100%;
+    background: #b2e610;
+    background: linear-gradient(70deg, #b2e610 0%, #0a7c0a 100%);
+    color: #fafafa; }
+    .front-page.body .heading {
+      margin: 0;
+      padding: 40px 0;
+      display: block;
+      text-align: center;
+      font-size: 40px; }
+      .front-page.body .heading span {
+        font-size: 80%; }
+      .front-page.body .heading p {
+        margin: 0;
+        font-size: 80%; }
+    .front-page.body .author-info {
+      max-width: 50%;
+      margin: 0 auto;
+      display: block; }
+    .front-page.body .project-grid {
+      width: 80%;
+      margin: 0 auto;
+      padding-top: 35px;
+      display: grid;
+      grid-template-rows: 25% 25% 25%;
+      grid-template-columns: auto auto auto;
+      grid-auto-rows: auto;
+      grid-row-gap: 25px;
+      grid-column-gap: 2%; }
+      .front-page.body .project-grid .box {
+        min-height: 200px;
+        width: 100%;
+        background-color: rgba(10, 10, 10, 0.9); }
+        .front-page.body .project-grid .box.a {
+          grid-row: 1 / span 2; }
+        .front-page.body .project-grid .box.f {
+          grid-column: 1 / span 3; } }
 @media only screen and (min-width: 601px) {
   .front-page.header {
     height: 50px;

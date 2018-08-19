@@ -13,17 +13,70 @@ html {
     // header
     .front-page {
         &.header {
-            height: 90px;
+            height: 50px;
             width: 100%;
             background-color: rgba(10,10,10,0.9);
+            .icon {
+                height: 40px;
+                width: 40px;
+                margin: 5px 0 0 10px;
+                background-color: rgba(240,240,240,0.9);
+                border-radius: 50% 50%;
+                transition: all 350ms linear;
+                &:hover {
+                    background-color: white;
+                }
+            }
         }
 
         &.body {
-            height: 100%;
+            height: auto;
             width: 100%;
-            h1 {
-                margin: 40px auto;
-                display: inline-block;
+             background: rgb(178,230,16);
+             background: linear-gradient(70deg, rgba(178,230,16,1) 0%, rgba(10,124,10,1) 100%); 
+             color: rgb(250,250,250);
+            .heading {
+                margin: 0;
+                padding: 40px 0;
+                display: block;
+                text-align: center;
+                font-size: 40px;
+                span {
+                    font-size: 80%;
+                }
+                p {
+                    margin: 0;
+                    font-size: 80%;
+                }
+            }
+
+            .author-info {
+                max-width: 50%;
+                margin: 0 auto;
+                display: block;
+            }
+            .project-grid {
+                width: 80%;
+                margin: 0 auto;
+                padding-top: 35px;
+                display: grid;
+                grid-template-rows: 25% 25% 25%;
+                grid-template-columns: auto auto auto;
+                grid-auto-rows: auto;
+                grid-row-gap: 25px;
+                grid-column-gap: 2%;
+                .box {
+                    min-height: 200px;
+                    width: 100%;
+                    background-color: rgba(10,10,10,0.9);
+                    &.a {
+                        grid-row: 1 / span 2;
+                    }
+
+                    &.f {
+                        grid-column: 1 / span 3;
+                    }
+                }
             }
         }
     }
