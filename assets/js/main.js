@@ -1,7 +1,7 @@
 function desktopOnTablet() {
     var viewMode = getCookie("view-mode");
     if (viewMode === "desktop") {
-        viewport.setAttribute('content', 'width=1100');
+        viewport.setAttribute('content', 'width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no');
     } else if (viewMode === 'tablet') {
         viewport.setAttribute('content', 'width=1100');
     }
