@@ -1,0 +1,121 @@
+.footer {
+	width: 100%;
+	margin-top: 120px;
+	min-height: 378px;
+	background-color: #e6ebee;
+	.footer__container {
+	    width: $pcSize;
+		margin: 0 auto;
+		font-size: 0;
+		.footer__nav {
+			ul {
+				li {
+					padding: 90px 2% 95px;
+					display: inline-block;
+					&:first-of-type {
+						padding: 90px 2% 95px 0;
+					}
+					&:last-of-type{
+						padding: 90px 0 95px 0;
+						float: right;
+					}
+					a {
+						p {
+							font-size: 14px;
+							text-align: center;
+						}
+					}
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+
+		}
+		.footer__info {
+			margin: 0 auto;
+			.footer__img {
+				width: 282px;
+				padding-bottom: 20px;
+				height: 39px;
+				margin: 0 auto;				
+				img {
+				    width: 100%;
+				    height: auto;
+	                transition: all .25s ease-out;
+	                &:hover {
+	                    -webkit-filter: opacity(.2);
+	                    filter: opacity(0.7);
+	                    cursor: pointer;
+	                }
+				}
+			}
+			p {
+				font-size: 14px;
+				line-height: 1.7;
+				text-align: center;
+			}
+		}
+	}
+
+} // footer
+
+
+@media only screen and (max-width: $mobileSize) {
+	.footer {
+		.footer__container {
+			width: 100%;
+			.footer__nav {
+				ul {
+					li {
+						padding: 0;
+						display: block;
+						&:first-of-type {
+							padding: 0;
+						}
+						&:last-of-type{
+							padding: 0;
+							float: none;
+						}
+						a {
+							p {
+								padding: 15px 0 15px 12px;
+								border-bottom: 2px solid rgb(230,230,230); 
+								background-color: #00437c;
+								text-align: initial;
+								color: #ffffff;
+								font-size: 12px;
+								&:hover {
+									text-decoration: underline;
+								}
+							}
+						}
+					}
+				}
+	
+			}
+			.footer__info {
+				// margin: 0 auto;
+				padding: 63px 0 65px 0;
+				.footer__img {			
+					padding-bottom: 0;
+					img {
+						margin: 0 auto;
+						width: auto;
+						height: 30px;
+					    display: block;
+					}
+				}
+				p {
+					margin: 0 30px;
+					font-size: 12px;
+				}
+
+				p + p {
+
+				}
+			}
+		}
+	}
+	
+}
