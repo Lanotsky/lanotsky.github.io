@@ -1,8 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import url('https://rsms.me/inter/inter-ui.css');
+
+$cursive: 'Pacifico', cursive;
+$regular: 'Inter UI', 'Roboto', sans-serif;
 
 html {
     body {
-        font-family: 'Roboto', sans-serif;
+        font-family: $regular;
         font-size: 1em;
     }
 }
