@@ -1,0 +1,112 @@
+// front-page moble 
+
+// mobile first
+
+@media only screen and (max-width: 600px ) {
+// ---- Mobile -----
+    // header
+    .front-page {
+        &.header {
+            height: 50px;
+            width: 100%;
+            background-color: rgba(10,10,10,0.2);
+            .icon {
+                height: 30px;
+                width: 30px;
+                margin: 10px 0 0 15px;
+                background-color: rgba(240,240,240,0.9);
+                border-radius: 50% 50%;
+                transition: all 350ms linear;
+                &:hover {
+                    background-color: white;
+                }
+            }
+        }
+
+        &.body {
+            height: auto;
+            width: 100%;
+            padding-bottom: 40px;
+            .heading {
+                width: 90%;
+                margin: 0 auto;
+                @include interpolate(padding-top, $min-width, $max-width, 30px, 120px);
+                @include interpolate(padding-bottom, $min-width, $max-width, 30px, 100px);
+                display: block;
+                text-align: center;
+                @include interpolate(font-size, $min-width, $max-width, 30px, 60px);
+                font-family: $cursive;
+                letter-spacing: 4px;
+                span {
+                   @include interpolate(font-size, $min-width, $max-width, 15px, 20px);
+                    font-family: $regular;
+                    letter-spacing: 1px;
+                }
+                p {
+                    margin: 0;
+                    @include interpolate(font-size, $min-width, $max-width, 15px, 20px);
+                    font-family: $regular;
+                    letter-spacing: 1px;
+                }
+            }
+
+            .author-info {
+                max-width: 90%;
+                margin: 0 auto;
+                display: block;
+                p {
+                     @include interpolate(font-size, $min-width, $max-width, 15px, 20px);
+                    line-height: 1.5em;
+                }
+            }
+            .project-grid {
+                width: 90%;
+                margin: 0 auto;
+                padding-top: 35px;
+                display: grid;
+                grid-template-rows: 25% 25% 25%;
+                grid-template-columns: 1fr;
+                grid-auto-rows: auto;
+                grid-row-gap: 25px;
+                grid-column-gap: 2%;
+                .box {
+                    min-height: 200px;
+                    width: 100%;
+                    background-color: rgba(10,10,10,0.9);
+                    transition: all 200ms linear;
+                    a {
+                        width: 100%;
+                        height: 100%;
+                        display: block;
+                    }
+                    &:hover {
+                        // box-shadow: 0 0 5px 2px rgba(240,240,240,1);
+                        opacity: 0.5;
+                    }
+                    &.a {
+                        background: url('../img/demo-b.png');
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                    }
+
+                    &.b {
+                        background: url('../img/demo-a.png');
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                    }
+                    &.c {
+                        background: url('../img/demo-c.png');
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                    }
+                }
+            }
+
+        }
+        &.footer {
+                    height: 100px;
+                    width: 100%;
+                    background-color: rgba(10,10,10,0.4);
+            }
+    } // end of front-page 
+}
