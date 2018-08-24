@@ -64,15 +64,10 @@ article, header, footer, aside, figure, figcaption, nav, section {
   display:block;
 }
 
-html {
-  height: 100vh;
-	body {
-	min-height: 100%;
-	position: relative;
-	}
+html,
+body {
+  position: relative;
 }
-
-$footerHeight: 100px;
 
 
 body {

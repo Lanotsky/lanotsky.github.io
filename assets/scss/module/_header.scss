@@ -1,0 +1,19 @@
+.header {
+    height: 50px;
+    width: 100%;
+    background-color: rgba(10,10,10,0.1);
+    .icon {
+        height: 30px;
+        width: 30px;
+        margin: 10px 0 0 15px;
+        border: 2px solid transparent;
+        background-color: rgba(240,240,240,0.9);
+        box-sizing: border-box;
+        border-radius: 50% 50%;
+        transition: all 350ms linear;
+        &:hover {
+            border: 2px solid white;
+            background-color: white;
+        }
+    }
+}

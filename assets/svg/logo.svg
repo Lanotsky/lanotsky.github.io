@@ -1,0 +1,16 @@
+<svg width="360" height="360" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <g>
+  <title>background</title>
+  <rect fill="#fff" id="canvas_background" height="362" width="362" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <ellipse ry="163" rx="163.500013" id="svg_1" cy="175.450003" cx="178" stroke-width="0" stroke="#000" fill="#ffd45e"/>
+  <text transform="matrix(10.4396, 0, 0, 5.97441, -3396.82, -1452.9)" xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_3" y="283.949997" x="346.5" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000"/>
+  <text font-style="normal" font-weight="bold" transform="matrix(7.49958, 0, 0, 8.47996, -2676.3, -1171.39)" xml:space="preserve" text-anchor="start" font-family="'Times New Roman', Times, serif" font-size="24" id="svg_5" y="166.889641" x="365.786519" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#ffffff">AJ</text>
+ </g>
+</svg>
