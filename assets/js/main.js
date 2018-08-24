@@ -1,13 +1,10 @@
-function desktopOnTablet() {
-    var viewMode = getCookie("view-mode");
-    if (viewMode === "desktop") {
-        viewport.setAttribute('content', 'width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no');
-    } else if (viewMode === 'tablet') {
-        viewport.setAttribute('content', 'width=1100');
-    }
-    else if (viewMode === "mobile") {
-        viewport.setAttribute('content', 'width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no');
-    }
-}
+var slideUp = {
+    distance: '150%',
+    origin: 'bottom',
+    opacity: 0,
+    duration: 900
+};
 
-desktopOnTablet();
+$(function(){
+    ScrollReveal().reveal($('.reveal'), slideUp); 
+});
