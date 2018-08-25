@@ -62,37 +62,55 @@
                 height: auto;
                 grid-column: 1 / span 2;
                 grid-row: 3;
-                background-color: rgba(10,10,10,0.2);
                 .project-group {
                     &.static {
                         display: grid;
                         grid-template-columns: 1fr 1fr;
                         grid-auto-rows: auto;
+                        overflow: hidden;
                         .project {
-                             @include interpolate(height, $min-width, $max-width, 230px, 320px);
+                            @include interpolate(height, $min-width, $max-width, 230px, 320px);
                             margin-bottom: 50px;
                             grid-column: 1 / span 1;
-                            border: 1px solid black;        
-                            box-sizing: border-box;
-                            background-color: rgba(10,10,10,0.2);
                             &.one {
-                                grid-column: 1 / span 1;
                                 grid-row: 1;
+                                background: url('../img/demo-a.png');
+                                background-size: cover;
+                                background-position: center;
+                                background-repeat: no-repeat;
                             }
 
                             &.two {
                                 grid-row: 2;
+                                background: url('../img/demo-b.png');
+                                background-size: cover;
+                                background-position-x: center;
+                                background-repeat: no-repeat;
                             }
 
                             &.three {
                                 grid-row: 3;
+                                background: url('../img/demo-c.png');
+                                background-size: cover;
+                                background-position: center;
+                                background-repeat: no-repeat;
                             }
                         } // </ project>
                         .project_desc {
                             @include interpolate(height, $min-width, $max-width, 230px, 320px);
+                            width: 100%;
                             margin-bottom: 50px;
-                            grid-column: 2 / span 1;
-                            background-color: rgba(10,10,10,0.1);
+                            margin-left: 100%;
+                            display: grid;
+                            justify-items: center;
+                            align-items: center;
+                            opacity: 0;
+                            transition: all 500ms ease-in;
+                            &.show {
+                                margin-left: 0;
+                                opacity: 1;
+                                // grid-column: 2 / span 1;
+                            }
                         }
                     } // </ project-group static>
                 } // </ project-group>
