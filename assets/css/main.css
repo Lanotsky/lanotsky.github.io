@@ -416,13 +416,13 @@ html body {
           margin-top: 70px; } }
 @media only screen and (min-width: 601px) {
       .front-page.body .author-info {
-        margin-bottom: 80px; } }
+        margin-bottom: 200px; } }
       @media only screen and (min-width: 601px) and (min-width: 320px) {
         .front-page.body .author-info {
-          margin-bottom: calc(2.27273vw + 72.72727px); } }
+          margin-bottom: calc(11.36364vw + 163.63636px); } }
       @media only screen and (min-width: 601px) and (min-width: 1200px) {
         .front-page.body .author-info {
-          margin-bottom: 100px; } }
+          margin-bottom: 300px; } }
 @media only screen and (min-width: 601px) {
       .front-page.body .author-info p {
         line-height: 1.5em; }
@@ -486,7 +486,8 @@ html body {
     .front-page.body .project-grid {
       height: auto;
       grid-column: 1 / span 2;
-      grid-row: 3; }
+      grid-row: 3;
+      border-top: 1px solid transparent; }
       .front-page.body .project-grid .project-group.static {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -522,6 +523,10 @@ html body {
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat; }
+          .front-page.body .project-grid .project-group.static .project a {
+            height: 100%;
+            width: 100%;
+            display: block; }
         .front-page.body .project-grid .project-group.static .project_desc {
           width: 100%;
           margin-bottom: 50px;
