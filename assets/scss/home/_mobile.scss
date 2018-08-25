@@ -5,16 +5,19 @@
 @media only screen and (max-width: 600px ) {
 // ---- Mobile -----
     // header
-    .front-page {
-        &.body {    
+    .body {
+        &.front-page {    
             height: auto;
             width: calc(100% - 10%);
             margin: 0 auto;
             padding-bottom: 100px; // height of the footer
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-auto-rows: auto;
             .heading {
-                width: 100%;
                 @include interpolate(margin-top, $min-width, $max-width, 20px, 30px);
-                display: inline-block;
+                grid-column: 1 / span 2;
+                grid-row: 1 / span 1;
                 text-align: center;
                 box-sizing: border-box;
                 p {
@@ -26,9 +29,10 @@
 
             .author-info {
                 height: auto;
-                width: 100%;
                 @include interpolate(margin-top, $min-width, $max-width, 30px, 50px);
-                display: inline-block;
+                 @include interpolate(margin-bottom, $min-width, $max-width, 40px, 60px);
+                grid-column: 1 / span 2;
+                grid-row: 3;
                 p {
                     @include interpolate(padding-bottom, $min-width, $max-width, 8px, 15px);
                     @include interpolate(font-size, $min-width, $max-width, 14px, 18px);
@@ -40,6 +44,8 @@
             }
             .author-logo {
                 width: 100%;
+                grid-column: 1 / span 2;
+                grid-row: 2;
                 @include interpolate(margin-top, $min-width, $max-width, 20px, 40px);
                 .svg-container {
                     height: 100%;
@@ -48,15 +54,105 @@
                     img {
                         height: auto;
                         width: 100%;
+                        border-radius: 50%;
                     }
                 }
 
             }
+            .project-heading {
+                @include interpolate(margin-bottom, $min-width, $max-width, 20px, 30px);
+                @include interpolate(padding-bottom, $min-width, $max-width, 15px, 20px);
+                border-bottom: 1px solid white;
+                grid-column: 1 / span 2;
+                text-align: left;
+                span {
+                    display: block;
+                    @include interpolate(font-size, $min-width, $max-width, 20px, 30px);
+                    font-family: $heading;
+                }
+                p {
+                    @include interpolate(font-size, $min-width, $max-width, 15px, 18px);
+                    line-height: 1.5em;
+                }
+            }
             .project-grid {
+                height: auto;
+                grid-column: 1 / span 2;
+                border-top: 1px solid transparent;
+                .project-group {
+                    &.static {
+                        display: grid;
+                        grid-template-columns: 1fr;
+                        grid-auto-rows: auto;
+                        overflow: hidden;
+                        .project {
+                            @include interpolate(height, $min-width, $max-width, 230px, 320px);
+                            opacity: 0.75;
+                            transition: all 400ms linear;
+                            &:hover {
+                                opacity: 1;
+                            }
+                            &.one {
+                                grid-row: 1;
+                                background: url('../img/demo-a.png');
+                                background-size: cover;
+                                background-position: center;
+                                background-repeat: no-repeat;
+                            }
 
+                            &.two {
+                                grid-row: 3;
+                                background: url('../img/demo-b.png');
+                                background-size: cover;
+                                background-position-x: center;
+                                background-repeat: no-repeat;
+                            }
+
+                            &.three {
+                                grid-row: 5;
+                                background: url('../img/demo-c.png');
+                                background-size: cover;
+                                background-position: center;
+                                background-repeat: no-repeat;
+                            }
+                            a {
+                                height: 100%;
+                                width: 100%;
+                                display: block;
+                            }
+                        } // </ project>
+                        .project_desc {
+                            width: 100%;
+                            @include interpolate(height, $min-width, $max-width, 230px, 320px);
+                            // margin-left: 100%;
+                            display: grid;
+                            justify-items: center;
+                            align-items: center;
+                            opacity: 1;
+                            transition: all 500ms ease-in;
+                            // &.show {
+                            //     margin-left: 0;
+                            //     opacity: 1;
+                            //     // grid-column: 2 / span 1;
+                            // }
+                            .desc {
+                                width: 80%;
+                                margin: 0 auto;
+                                .project-name {
+                                    padding-bottom: 8px;
+                                    @include interpolate(font-size, $min-width, $max-width, 18px, 22px);
+                                }
+                                p {
+                                    @include interpolate(font-size, $min-width, $max-width, 13px, 16px);
+                                    line-height: 1.4em;
+                                }
+                            }
+                        }
+                    } // </ project-group static>
+                } // </ project-group>
             } // </ project-grid>
 
         }
 
-    } // end of front-page 
+    } // end of body 
 }

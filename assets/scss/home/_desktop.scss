@@ -3,8 +3,8 @@
 @media only screen and (min-width: 601px) {
 // ---- Desktop ------
     // header
-    .front-page {
-        &.body {    
+    .body {
+        &.front-page {    
             height: auto;
             width: calc(100% - 10%);
             margin: 0 auto;
@@ -24,7 +24,7 @@
             }
 
             .author-info {
-                @include interpolate(margin-top, $min-width, $max-width, 50px, 70px);
+                @include interpolate(margin-top, $min-width, $max-width, 50px, 100px);
                 @include interpolate(margin-bottom, $min-width, $max-width, 200px, 300px);
                 grid-column: 1 / span 1;
                 grid-row: 2 / span 1;
@@ -54,14 +54,29 @@
                     img {
                         height: auto;
                         width: 100%;
+                        border-radius: 50%;
                     }
                 }
 
             }
+            .project-heading {
+                @include interpolate(margin-bottom, $min-width, $max-width, 15px, 20px);
+                @include interpolate(padding-bottom, $min-width, $max-width, 15px, 20px);
+                border-bottom: 1px solid white;
+                grid-column: 1 / span 1;
+                text-align: left;
+                span {
+                    display: block;
+                    @include interpolate(font-size, $min-width, $max-width, 15px, 30px);
+                    font-family: $heading;
+                }
+                p {
+                    @include interpolate(font-size, $min-width, $max-width, 13px, 16px);
+                }
+            }
             .project-grid {
                 height: auto;
                 grid-column: 1 / span 2;
-                grid-row: 3;
                 border-top: 1px solid transparent;
                 .project-group {
                     &.static {
@@ -73,6 +88,11 @@
                             @include interpolate(height, $min-width, $max-width, 230px, 320px);
                             margin-bottom: 50px;
                             grid-column: 1 / span 1;
+                            opacity: 0.75;
+                            transition: all 400ms linear;
+                            &:hover {
+                                opacity: 1;
+                            }
                             &.one {
                                 grid-row: 1;
                                 background: url('../img/demo-a.png');
@@ -117,6 +137,17 @@
                                 opacity: 1;
                                 // grid-column: 2 / span 1;
                             }
+                            .desc {
+                                width: 80%;
+                                margin: 0 auto;
+                                .project-name {
+                                    padding-bottom: 8px;
+                                    @include interpolate(font-size, $min-width, $max-width, 18px, 22px);
+                                }
+                                p {
+                                    @include interpolate(font-size, $min-width, $max-width, 13px, 16px);
+                                }
+                            }
                         }
                     } // </ project-group static>
                 } // </ project-group>
@@ -124,7 +155,7 @@
 
         }
 
-    } // end of front-page 
+    } // end of body
 }
 // desktop
 

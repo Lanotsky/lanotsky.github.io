@@ -1,4 +1,11 @@
 @import './module/header';
 @import './home/desktop';
 @import './home/mobile';
-@import './module/footer'
+@import './module/footer';
+
+html {
+    color: white;
+    background: rgb(121,191,250);
+    background: linear-gradient(180deg, rgba(121,191,250,0.9668067055923932) 21%, rgba(18,147,255,1) 95%);
+
+}
